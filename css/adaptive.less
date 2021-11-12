@@ -1,0 +1,47 @@
+//main: style.less
+@media (max-width:1200px){
+	.main_container{
+		max-width: 970px;
+	}
+}
+@media (max-width:992px){
+	.main_container{
+		max-width: 750px;
+	}
+}
+
+@media (max-width:767px){
+	.main_container{
+		max-width: none;
+	}
+	
+	.top_menu{
+		position: fixed;
+		border-radius: none;
+		top: 0;
+		left: 0;
+		z-index: 3;
+	}
+	.header_burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+	}
+	.head_burger:before,
+	.head_burger:after{
+		content: "";
+		background-color: aliceblue;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		
+	}
+	.head_burger:before{
+		top:  0;
+	}
+	.head_burger:after{
+		bottom: 0;
+	}
+}

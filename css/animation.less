@@ -1,0 +1,155 @@
+//main: style.less
+
+
+
+nav.top_menu {
+  width: 80%;
+  background: #fff;
+ 
+ 
+}
+nav.top_menu ul {
+  list-style: none;
+  text-align: center;
+}
+nav.top_menu ul li {
+  display: inline-block;
+}
+nav.top_menu ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 15px;
+}
+nav.top_menu ul li a,
+nav.top_menu ul li a:after,
+nav.top_menu ul li a:before {
+  transition: all .5s;
+}
+
+
+
+
+
+nav.top_menu ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.top_menu ul li a:hover {
+  color: black;
+}
+nav.top_menu ul li a:after {
+  border-radius: 20px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: @button_color;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.top_menu ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+
+
+
+
+
+
+
+.under_menu a {
+    display: inline-block;
+    color: #07aa19;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+}
+.under_menu a:after {
+    display: block;
+    content: "";
+    background-color: @button_color;
+    height: 3px;
+    width: 0%;
+    left: 50%;
+    position: absolute;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.under_menu a:hover:after,
+.under_menu a:focus:after {
+    width: 100%;
+}
+
+
+
+
+
+
+
